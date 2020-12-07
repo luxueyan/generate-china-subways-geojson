@@ -1,0 +1,27 @@
+{
+  "name": "generate-china-subways-geojson",
+  "version": "1.0.0",
+  "description": "a tool generate geojson data from gaode data",
+  "main": "index.js",
+  "scripts": {
+    "gen": "node index.js",
+    "combine": "node combine.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=12.18.0"
+  },
+  "keywords": [
+    "subways",
+    "china",
+    "geojson"
+  ],
+  "author": "xueyan.lu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
+    "glob": "^7.1.6",
+    "minimist": "^1.2.5"
+  }
+}
