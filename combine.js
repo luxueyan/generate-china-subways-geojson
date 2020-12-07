@@ -18,13 +18,17 @@ const chinaStation = {
 }
 
 lines.forEach((l) => {
-	const data = require(l)
-	chinaLine.features.push(...data.features)
+	if (!l.endsWith('china-line.json')) {
+		const data = require(l)
+		chinaLine.features.push(...data.features)
+	}
 })
 
 stations.forEach((l) => {
-	const data = require(l)
-	chinaStation.features.push(...data.features)
+	if (!l.endsWith('china-station.json')) {
+		const data = require(l)
+		chinaStation.features.push(...data.features)
+	}
 })
 
 fs.writeFileSync(path.join(process.cwd(), 'data/china-line.json'), JSON.stringify(chinaLine))
