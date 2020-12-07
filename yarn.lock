@@ -64,6 +64,11 @@ fs.realpath@^1.0.0:
   resolved "https://registry.npm.taobao.org/fs.realpath/download/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
+gcoord@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.npm.taobao.org/gcoord/download/gcoord-0.2.3.tgz#bdf8d48ed199785177eb29727ef3ab16b29d895e"
+  integrity sha1-vfjUjtGZeFF36ylyfvOrFrKdiV4=
+
 glob@^7.1.6:
   version "7.1.6"
   resolved "https://registry.npm.taobao.org/glob/download/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"

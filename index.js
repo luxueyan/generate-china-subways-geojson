@@ -4,6 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
 const argv = require('minimist')(process.argv.slice(2))
+const gcoord = require('gcoord')
 
 const promiseArr = []
 const totalLength = subwayList.length
@@ -22,7 +23,7 @@ subwayList.map((v, i) => {
 		percent = Math.min((index * 100) / totalLength, 100)
 		return
 	}
-	
+
 	const req = axios.get(`http://map.amap.com/service/subway`, {
 		params: {
 			_r: Math.random(),
@@ -54,7 +55,8 @@ subwayList.map((v, i) => {
 		res.forEach((g) => {
 			const coords_g = []
 			g.st.forEach((s) => {
-				const coords = s.sl.split(',').map(Number)
+				let coords = s.sl.split(',').map(Number)
+				coords = gcoord.transform(coords, gcoord.GCJ02, gcoord.WGS84)
 				coords_g.push(coords)
 				if (!stations[s.poiid]) {
 					stations[s.poiid] = true

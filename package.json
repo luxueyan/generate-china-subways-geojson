@@ -21,6 +21,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "chalk": "^4.1.0",
+    "gcoord": "^0.2.3",
     "glob": "^7.1.6",
     "minimist": "^1.2.5"
   }
